@@ -26,4 +26,16 @@
     <ProjectReference Include="..\AvaloniaApplication1.MediaPlayer.Mpv\AvaloniaApplication1.MediaPlayer.Mpv.csproj" />
     <ProjectReference Include="..\AvaloniaApplication1.MediaPlayer\AvaloniaApplication1.MediaPlayer.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Media\video1.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Media\video2.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Media\video3.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
