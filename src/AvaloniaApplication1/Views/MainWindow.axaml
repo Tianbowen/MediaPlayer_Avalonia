@@ -1,0 +1,40 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaApplication1.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaApplication1.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AvaloniaApplication1"
+		xmlns:ui="clr-namespace:AvaloniaApplication1.MediaPlayer;assembly=AvaloniaApplication1.MediaPlayer"
+		xmlns:mpv="clr-namespace:AvaloniaApplication1.MediaPlayer.Mpv;assembly=AvaloniaApplication1.MediaPlayer.Mpv"
+		>
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<!--<Window.KeyBindings>
+		<KeyBinding Gesture="Space" Command="{Binding PlayPauseCommand, ElementName=Player}" />
+		<KeyBinding Gesture="Right" Command="{Binding SeekCommand, ElementName=Player}" CommandParameter="{ui:Int32 1}" />
+		<KeyBinding Gesture="Ctrl+Right" Command="{Binding SeekCommand, ElementName=Player}" CommandParameter="{ui:Int32 10}" />
+		<KeyBinding Gesture="Left" Command="{Binding SeekCommand, ElementName=Player}" CommandParameter="{ui:Int32 -1}" />
+		<KeyBinding Gesture="Ctrl+Left" Command="{Binding SeekCommand, ElementName=Player}" CommandParameter="{ui:Int32 -10}" />
+		<KeyBinding Gesture="Up" Command="{Binding ChangeVolumeCommand, ElementName=Player}" CommandParameter="{ui:Int32 5}" />
+		<KeyBinding Gesture="Down" Command="{Binding ChangeVolumeCommand, ElementName=Player}" CommandParameter="{ui:Int32 -5}" />
+		<KeyBinding Gesture="Alt+Enter" Command="{Binding ToggleFullScreenCommand, ElementName=Player}" />
+	</Window.KeyBindings>-->
+	<Grid>
+		<ui:MediaPlayer x:Name="Player">
+			<!-- <bass:BassPlayerHost x:Name="PlayerHost" Source="E:\NaturalGrounding\AOA\Like a Cat.mp4" AutoPlay="true" /> -->
+			<mpv:MpvPlayerHost Source="D:\Work\Company\Download\Baidu\和祐国际医院启航片1227-4分半.mp4" Volume="80" Loop="True" />
+			<!-- Source="E:\Music\INNA\Body And The Sun\CD1\07 Fool Me.mp3" Pitch="0.9818181818181818181818" -->
+		</ui:MediaPlayer>
+		<!-- <ui:MediaPlayer Height="50" /> -->
+	</Grid>
+
+</Window>

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	<LangVersion>default</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Styles\Default\Icons.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="Styles\Default\Icons.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.1.0" />
+
+	  <PackageReference Include="System.Reactive" Version="6.0.0" />
+  </ItemGroup>
+
+</Project>
